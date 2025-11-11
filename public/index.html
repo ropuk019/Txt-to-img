@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Image Generator API</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: #0f0f0f;
+      color: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #00b3ff;
+      margin-bottom: 10px;
+    }
+    code {
+      background: #1b1b1b;
+      padding: 6px 10px;
+      border-radius: 6px;
+      display: inline-block;
+      color: #0ef;
+    }
+    a {
+      color: #00b3ff;
+      text-decoration: none;
+    }
+    footer {
+      margin-top: 25px;
+      font-size: 13px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧠 AI Image Generator API</h1>
+  <p>This API lets you generate images using <strong>Fal.ai FLUX</strong> or similar models.</p>
+
+  <h3>How to use:</h3>
+  <p>
+    Send a <code>POST</code> request to:<br />
+    <code>/api/generate</code>
+  </p>
+  <p>with JSON body:</p>
+  <code>{ "prompt": "a cyberpunk city at night", "width": 1024, "height": 1024 }</code>
+
+  <p>Example:</p>
+  <code>
+    curl -X POST https://txttoimg.vercel.app/api/generate \
+    -H "Content-Type: application/json" \
+    -d '{"prompt":"a cat wearing sunglasses"}'
+  </code>
+
+  <p>
+    The API will return a JSON response containing an image URL or error info.<br />
+    Example: <code>{ "ok": true, "url": "https://..." }</code>
+  </p>
+
+  <footer>
+    Made by Txc Monowar
+  </footer>
+</body>
+</html>
