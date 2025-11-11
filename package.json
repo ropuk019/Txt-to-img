@@ -1,0 +1,8 @@
+{
+  "name": "txt-to-vosra",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@fal-ai/client": "^1.0.0"
+  }
+}
