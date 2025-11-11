@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Image Generator API</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: #0f0f0f;
+      color: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 { color: #00b3ff; }
+    code {
+      background: #1b1b1b;
+      padding: 6px 10px;
+      border-radius: 6px;
+      display: inline-block;
+      color: #0ef;
+    }
+    a { color: #00b3ff; text-decoration: none; }
+    footer { margin-top: 25px; font-size: 13px; opacity: 0.7; }
+  </style>
+</head>
+<body>
+  <h1>🧠 AI Image Generator API</h1>
+  <p>Generate images via <strong>Fal.ai FLUX</strong> model.</p>
+
+  <h3>Usage</h3>
+  <p>Send a <code>POST</code> to <code>/api/generate</code></p>
+  <code>{ "prompt": "a futuristic city skyline", "width": 1024, "height": 1024 }</code>
+
+  <p>Example curl:</p>
+  <code>
+    curl -X POST https://your-vercel-app.vercel.app/api/generate \
+    -H "Content-Type: application/json" \
+    -d '{"prompt":"a cat wearing sunglasses"}'
+  </code>
+
+  <p>Response:</p>
+  <code>{ "ok": true, "url": "https://..." }</code>
+
+  <footer>
+    Made with ❤️ using <a href="https://fal.ai" target="_blank">Fal.ai</a>
+  </footer>
+</body>
+</html>
